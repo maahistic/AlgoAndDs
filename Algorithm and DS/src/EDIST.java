@@ -44,10 +44,13 @@ public class EDIST {
 	}
 
 	// Driver Code
+	/**
+	 * @param args
+	 */
 	public static void main(String args[])
 	{
 		String str1 = "sunday";
-		String str2 = "saturday";
+		String str2 = "snuday";
 
 		System.out.println(editDist(
 			str1, str2, str1.length(), str2.length()));
