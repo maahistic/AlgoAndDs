@@ -16,7 +16,6 @@ public class findAllSubset {
             }  
         }  
   
-        //This loop prints all the subsets formed from the string.  
         System.out.println("All subsets for given string are: ");  
         int x = 0;
         for(int i = 0; i < arr.length; i++) { 
