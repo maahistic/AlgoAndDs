@@ -1,29 +1,33 @@
 package com.learning.challenges;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class InfyAss3 {
-
+//Java
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
-		int count = scan.nextInt();
-		scan.nextLine();
-
-		for (int p = 0; p < count; p++) {
-			String lex = "";
-			String tmp = scan.nextLine();
-			String[] arr = tmp.split(" ");
-			String name = arr[1];
-			int k = Integer.parseInt(arr[0]);
-			boolean flag = true;
-			while (true) {
-				char temp = name.charAt(0);
-				for (int i = 1; i < k && i < name.length(); i++) {
-					if (name.charAt(i) < temp) {
-						temp = name.charAt(i);
-					}
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int k = 0;
+		String smallest = "";
+		String str;
+		for (int i = 0; i < num; i++) {
+			k = sc.nextInt();
+			str = sc.nextLine();
+			str = str.trim();
+			smallest = str;
+			if (k == 1) {
+				for (int j = 0; j < str.length(); j++) {
+					str = str.substring(1) + str.substring(0, 1);
+					smallest = str.compareTo(smallest) < 0 ? str : smallest;
 				}
+				System.out.println(smallest);
+			} else {
+				char[] arr = str.toCharArray();
+				Arrays.sort(arr);
+				System.out.println(String.valueOf(arr));
+
 			}
 		}
 	}

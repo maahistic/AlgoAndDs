@@ -2,6 +2,7 @@ package com.learning.challenges;
 
 import java.util.Scanner;
 
+//1TC failing
 public class InfyAss8 {
 
 	public static void main(String[] args) {

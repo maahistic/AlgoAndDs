@@ -4,41 +4,30 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class InfyAss5 {
-
+//done
 	public static void main(String[] args) {
-
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		for (int i = 0; i < num; i++) {
-			scan.nextInt();
+			int len = scan.nextInt();
 			scan.nextLine();
 			String str = scan.nextLine();
 			int[] traveller = Arrays.stream(str.split(" ")).mapToInt(Integer::parseInt).toArray();
-			int len = traveller.length;
-			int count = 0;
 			int subtotal = 0;
 			Arrays.sort(traveller);
-
-			if (len < 3)
-				System.out.println(traveller[len - 1]);
-			else if (len == 3)
-				System.out.println(Arrays.stream(traveller) .sum());
-			else if ((len & 1) == 0) {
-				// for Even
-				for (int j = len; len > 3; len -= 2) {
-					subtotal += traveller[len - 1];
-					count++;
-				}
-				System.out.println(subtotal + ((traveller[0] * count) + (traveller[1] * ((count * 2) + 1))));
-			} else {
-				// for Odd
-				for (int j = len; len >= 3; len -= 2) {
-					subtotal += traveller[len - 1];
-					count++;
-				}
-				System.out.println(subtotal + (traveller[0] * count) + (traveller[1] * (((count - 1) * 2) + 1)));
+			while (len >= 4) {
+				int opt1 = traveller[1] + traveller[0] + traveller[len - 1] + traveller[1];
+				int opt2 = traveller[len - 1] + traveller[0] + traveller[len - 2] + traveller[0];
+				subtotal += opt1 < opt2 ? opt1 : opt2;
+				len -= 2;
 			}
-
+			if (len == 3)
+				subtotal += traveller[0] + traveller[1] + traveller[2];
+			if (len == 2)
+				subtotal += traveller[1];
+			if (len == 1)
+				subtotal += traveller[0];
+			System.out.println(subtotal);
 		}
 	}
 }

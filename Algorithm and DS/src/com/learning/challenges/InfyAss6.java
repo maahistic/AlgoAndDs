@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class InfyAss6 {
-
+//done
 	public static void main(String args[]) throws Exception {
 		BufferedReader bu = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(bu.readLine());
