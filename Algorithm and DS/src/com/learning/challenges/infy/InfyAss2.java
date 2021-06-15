@@ -32,7 +32,6 @@ public class InfyAss2 {
 		}
 		System.out.println(m != 0 ? m : -1);
 	}
-
 	static int treeCount(int i, int j, int count) {
 		ret = count + 1;
 		if ((j + 1 < num) && forest[i][j + 1] == 'T' && met[i][j + 1] == 0) {
