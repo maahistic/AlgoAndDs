@@ -1,4 +1,4 @@
-package com.learning.challenges;
+package com.learning.challenges.infy;
 
 import java.util.HashMap;
 import java.util.Map;

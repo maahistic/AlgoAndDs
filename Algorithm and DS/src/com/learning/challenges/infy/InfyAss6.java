@@ -1,4 +1,4 @@
-package com.learning.challenges;
+package com.learning.challenges.infy;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,3 +1,5 @@
+package com.learning.challenges;
+
 /* A Naive recursive implementation
 of 0-1 Knapsack problem */
 public class Knapsack {
@@ -5,7 +7,7 @@ public class Knapsack {
 	// A utility function that returns
 	// maximum of two integers
 	static int max(int a, int b)
-	{
+	{ 
 	return (a > b) ? a : b;
 	}
 

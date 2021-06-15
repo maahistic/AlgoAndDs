@@ -1,5 +1,4 @@
-package com.learning.challenges;
-
+package com.learning.challenges.infy;
 import java.util.Scanner;
 
 public class InfyAss1 {
